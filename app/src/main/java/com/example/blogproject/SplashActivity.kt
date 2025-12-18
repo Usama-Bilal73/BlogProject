@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.blogproject.Register.WelcomeActivity
 
 class SplashActivity : AppCompatActivity() {
 
@@ -22,9 +23,10 @@ class SplashActivity : AppCompatActivity() {
             insets
         }
 
-        // SPLASH DELAY (2 seconds)
+        // SPLASH DELAY (3 seconds)
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
+            // Go to WelcomeActivity instead of MainActivity
+            val intent = Intent(this, WelcomeActivity::class.java)
             startActivity(intent)
             finish() // close splash activity
         }, 3000)

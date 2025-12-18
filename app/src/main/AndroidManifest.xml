@@ -11,21 +11,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BlogProject">
-        <activity
-            android:name=".SinginRegistrationActivity2"
-            android:exported="false" />
-        <activity
-            android:name=".Register.WellcomeActivity"
-            android:exported="false" /> <!-- Splash Screen (FIRST SCREEN) -->
+
+        <!-- Splash Screen (LAUNCHER) -->
         <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- Main Activity -->
+        </activity>
+
+        <!-- Welcome Activity (Should be accessible from Splash) -->
+        <activity
+            android:name=".Register.WelcomeActivity"
+            android:exported="false" />
+
+        <!-- Sign-in & Registration Activity -->
+        <activity
+            android:name=".SinginRegistrationActivity2"
+            android:exported="false" />
+
+        <!-- Main Activity -->
         <activity
             android:name=".MainActivity"
             android:exported="false" />
