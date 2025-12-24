@@ -10,11 +10,13 @@
     tools:context=".SinginRegistrationActivity2">
 
     <!-- TITLE -->
+
+    <!-- LOGIN SECTION -->
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="88dp"
         android:background="#03A9F4"
         android:fontFamily="@font/montserrat_subrayada_bold"
         android:paddingStart="12dp"
@@ -23,10 +25,10 @@
         android:textColor="#333333"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- LOGIN SECTION -->
     <EditText
         android:id="@+id/login_email_address"
         android:layout_width="280dp"
@@ -36,7 +38,8 @@
         android:hint="Enter your Email"
         android:inputType="textEmailAddress"
         android:padding="10dp"
-        android:textColor="#1D1D1D"
+        android:textColor="#000000"
+        android:textStyle="bold"
         android:textColorHint="#000000"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,6 +55,8 @@
         android:hint="Enter your Password"
         android:inputType="textPassword"
         android:padding="10dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
         android:textColorHint="#000000"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,6 +107,8 @@
         android:hint="Enter Your Name"
         android:inputType="text"
         android:padding="10dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
         android:textColorHint="#000000"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -117,6 +124,8 @@
         android:hint="Enter Your Email"
         android:inputType="textEmailAddress"
         android:padding="10dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
         android:textColorHint="#000000"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -132,6 +141,8 @@
         android:hint="Enter Your Password"
         android:inputType="numberPassword"
         android:padding="10dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
         android:textColorHint="#000000"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"

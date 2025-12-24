@@ -4,8 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.core.content.ContextCompat
 import com.example.blogproject.R
 import com.example.blogproject.SinginRegistrationActivity2
 import com.example.blogproject.databinding.ActivityWellcomeBinding
@@ -16,21 +15,13 @@ class WelcomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        enableEdgeToEdge() // Re-enabled for modern UI
+
+        // Explicitly set status bar color after enabling edge-to-edge
+        window.statusBarColor = ContextCompat.getColor(this, R.color.blue)
 
         binding = ActivityWellcomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(
-                systemBars.left,
-                systemBars.top,
-                systemBars.right,
-                systemBars.bottom
-            )
-            insets
-        }
 
         // Login button
         binding.buttonLogin.setOnClickListener {
