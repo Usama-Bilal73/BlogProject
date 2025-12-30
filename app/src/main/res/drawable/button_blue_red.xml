@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Pressed state -->
-    <item android:state_pressed="true">
-        <shape android:shape="rectangle">
-            <solid android:color="#D32F2F" /> <!-- Darker Red when pressed -->
-            <corners android:radius="20dp" />
-        </shape>
-    </item>
-    <!-- Default state -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#FF0000"> <!-- Red ripple on click -->
+    
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="#2196F3" /> <!-- Material Blue default -->
-            <corners android:radius="20dp" />
+            <solid android:color="#2196F3"/> <!-- Blue background -->
+            <corners android:radius="8dp"/> <!-- Rounded corners -->
         </shape>
     </item>
-</selector>
+
+</ripple>

@@ -18,7 +18,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BlogProject">
 
-        <!-- Splash Screen (LAUNCHER) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Register.WelcomeActivity"
+            android:exported="false" />
+
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -28,24 +35,30 @@
             </intent-filter>
         </activity>
 
-        <!-- Welcome Activity (Should be accessible from Splash) -->
-        <activity
-            android:name=".Register.WelcomeActivity"
-            android:exported="false" />
-
-        <!-- Sign-in & Registration Activity -->
         <activity
             android:name=".SinginRegistrationActivity2"
             android:exported="false" />
 
-        <!-- Main Activity -->
         <activity
-            android:name=".MainActivity"
+            android:name=".AddArticalActivity"
             android:exported="false" />
 
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
+        <activity
+            android:name=".BlogDetailsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SavedBlogsActivity"
+            android:exported="false" />
+            
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+            
+        <activity
+            android:name=".YourArticlesActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

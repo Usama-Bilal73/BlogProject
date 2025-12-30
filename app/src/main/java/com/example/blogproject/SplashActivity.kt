@@ -4,25 +4,28 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-// import androidx.activity.enableEdgeToEdge // Removed to fix status bar color
 import androidx.appcompat.app.AppCompatActivity
-// import androidx.core.view.ViewCompat // Removed
-// import androidx.core.view.WindowInsetsCompat // Removed
 import com.example.blogproject.Register.WelcomeActivity
 
 class SplashActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // enableEdgeToEdge() // This was overriding the status bar color!
         setContentView(R.layout.activity_splash)
 
-        // SPLASH DELAY (3 seconds)
         Handler(Looper.getMainLooper()).postDelayed({
-            // Go to WelcomeActivity instead of MainActivity
-            val intent = Intent(this, WelcomeActivity::class.java)
-            startActivity(intent)
-            finish() // close splash activity
-        }, 3000)
+            val sharedPreferences = getSharedPreferences("BlogProjectPrefs", MODE_PRIVATE)
+            val isFirstTime = sharedPreferences.getBoolean("isFirstTime", true)
+
+            if (isFirstTime) {
+                // First time launch, go to WelcomeActivity
+                startActivity(Intent(this, WelcomeActivity::class.java))
+                sharedPreferences.edit().putBoolean("isFirstTime", false).apply()
+            } else {
+                // Not the first time, go to MainActivity
+                startActivity(Intent(this, MainActivity::class.java))
+            }
+            finish()
+        }, 2000) // 2 second delay
     }
 }
